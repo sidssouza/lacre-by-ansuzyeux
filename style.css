@@ -1,0 +1,289 @@
+:root {
+    --color-bg: #ffffff;
+    --color-text: #000000;
+    --color-text-strong: #0000ff;
+    --color-stroke-button: #262626;
+    --brand-color: #33ff00;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-y: hidden;
+    background-color: var(--color-bg);
+    transition: 0.5s ease;
+}
+
+body.hovered {
+    background-color: var(--brand-color);
+    transition: 0.5s ease;
+}
+
+* {
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+    text-decoration: none;
+}
+
+p {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    color: var(--color-text);
+    font-size: 18px;
+    line-height: 24px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-text-strong);
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@font-face {
+    font-family: 'Lacre', sans-serif;
+    src: url(font/Lacre.otf);
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+}
+
+.animacao-cima-para-baixo {
+    animation-name: moveBox;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes moveBox {
+
+    0% {
+        transform: translateY(1000px);
+    }
+
+    100% {
+        transform: translateY(auto);
+    }
+
+    animate__fadeIn {
+        animation-name: fadeIn;
+    }
+}
+
+
+/* Tipografia */
+
+.type {
+    z-index: 10;
+    position: absolute;
+
+    transform: translate(-50%, -50%) rotate(3deg);
+    top: 50%;
+    left: 50%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    grid-template-rows: repeat(3, 250px);
+
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+
+}
+
+Span {
+    font-family: 'Lacre', sans-serif;
+    font-size: 80px;
+    color: var(--color-text-strong);
+    letter-spacing: 8px;
+}
+
+.frase-completa {
+    display: grid;
+    grid-area: 3 / 3 / 4 / 4;
+    max-width: 200px;
+    transform: rotate(-3deg);
+}
+
+.letteringHoverScatter span {
+    display: inline-block;
+    transition: 0.5s ease;
+}
+
+.letteringHoverScatter:hover .letter1 {
+    transform: translate3d(-0.8em, -0.5em, -0em) scale3d(1, 1, 1) rotateX(0deg) rotateY(-15deg) rotateZ(-15deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+}
+
+.letteringHoverScatter:hover .letter2 {
+    transform: translate3d(-0.8em, 0.5em, -0em) scale3d(1, 1, 1) rotateX(0deg) rotateY(-18deg) rotateZ(-20deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+}
+
+.letteringHoverScatter:hover .letter3 {
+    transform: translate3d(-0.5em, -0.9em, -0em) scale3d(1, 1, 1) rotateX(0deg) rotateY(18deg) rotateZ(20deg);
+    transform-style: preserve-3d;
+}
+
+.letteringHoverScatter:hover .letter4 {
+    transform: translate3d(-0.5em, 0.5em, -0em) scale3d(1, 1, 1) rotateX(0deg) rotateY(18deg) rotateZ(-35deg);
+    transform-style: preserve-3d;
+}
+
+.letteringHoverScatter:hover .letter5 {
+    transform: translate3d(0.5em, -0.6em, -0em) scale3d(1, 1, 1) rotateX(0deg) rotateY(15deg) rotateZ(35deg);
+    transform-style: preserve-3d;
+}
+
+.letteringHoverScatter:hover .letter6 {
+    transform: translate3d(0.5em, 0.8em, -0em) scale3d(1, 1, 1) rotateX(0deg) rotateY(12deg) rotateZ(-45deg);
+    transform-style: preserve-3d;
+}
+
+.letteringHoverScatter:hover .letter7 {
+    transform: translate3d(0.2em, -0.4em, -0em) scale3d(1, 1, 1) rotateX(0deg) rotateY(18deg) rotateZ(32deg);
+    transform-style: preserve-3d;
+}
+
+.letteringHoverScatter:hover .letter8 {
+    transform: translate3d(0.6em, -0.9em, -0em) scale3d(1, 1, 1) rotateX(0deg) rotateY(12deg) rotateZ(-30deg);
+    transform-style: preserve-3d;
+}
+
+.letteringHoverScatter:hover .letter9 {
+    transform: translate3d(0.8em, 0.3em, -0em) scale3d(1, 1, 1) rotateX(0deg) rotateY(16deg) rotateZ(18deg);
+    transform-style: preserve-3d;
+}
+
+/* Marquee */
+
+.marqueeInfinityLooping span {
+    color: #fff;
+}
+
+.marqueeInfinityLooping {
+
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.marqueeGroup {
+    display: flex;
+    gap: 1em;
+    overflow: hidden;
+    user-select: none;
+}
+
+.marqueeList {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1em;
+    min-width: 100%;
+    animation: scrollMarquee 20s linear infinite;
+}
+
+.marqueeList li {
+    font-size: 2em;
+    padding: 2em 3em;
+    background-color: var(--brand-color);
+    border-radius: 1em;
+}
+
+
+@keyframes scrollMarquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.marqueeGroup:hover .marqueeList {
+    animation-play-state: paused;
+}
+
+
+.text-info {
+    z-index: 100;
+}
+
+.text-info p {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    color: var(--color-text);
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.text-info a {
+    z-index: 100;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.autores {
+    z-index: 100;
+    position: absolute;
+    top: 60px;
+    left: 60px;
+}
+
+.ano {
+    z-index: 100;
+    position: absolute;
+    left: 60px;
+    bottom: 60px;
+}
+
+.download {
+    z-index: 100;
+    position: absolute;
+    right: 60px;
+    top: 60px;
+}
+
+
+@media screen and (max-width: 1440px) {
+    .type {
+        z-index: 10;
+        position: absolute;
+    
+        transform: translate(-50%, -50%) rotate(3deg);
+        top: 50%;
+        left: 50%;
+    
+        display: grid;
+        grid-template-columns: repeat(3, 200px);
+        grid-template-rows: repeat(3, 200px);
+    
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+    
+    }
+    
+    Span {
+        font-family: 'Lacre', sans-serif;
+        font-size: 60px;
+        color: var(--color-text-strong);
+        letter-spacing: 8px;
+    }
+}

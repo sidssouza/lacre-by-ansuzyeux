@@ -1,0 +1,89 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lacre</title>
+</head>
+
+<body>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.4.5/build/spline-viewer.js"></script>
+
+    <div class="halftone">
+        <div class="hero animacao-cima-para-baixo">
+            <spline-viewer url="https://prod.spline.design/NffzaDwOUVsEg4Q7/scene.splinecode"></spline-viewer>
+        </div>
+    </div>
+
+    <div class="type letteringHoverScatter">
+        <span class="letter1">QUAIS</span>
+        <span class="letter2">OS</span>
+        <span class="letter3">LIMITES</span>
+        <span class="letter4">DO</span>
+        <span class="letter5">DESIGN</span>
+        <span class="letter8">NA</span>
+        <span class="letter7">TIPOGRAFIA?</span>
+        <p class="frase-completa">Quais os limites do design na tipografia?</p>
+    </div>
+
+    <div class="deg-marquee">
+        <div class="marqueeInfinityLooping">
+            <div class="marqueeGroup">
+                <ul class="marqueeList">
+                    <li><span>LACRE</span></li>
+                    <li><span>LACRE</span></li>
+                    <li><span>LACRE</span></li>
+                    <li><span>LACRE</span></li>
+                    <li><span>LACRE</span></li>
+                    <li><span>LACRE</span></li>
+                    <li><span>LACRE</span></li>
+                    <li><span>LACRE</span></li>
+                </ul>
+                <ul aria-hidden="true" class="marqueeList">
+                    <li><span>LACRE</span></li>
+                    <li><span>LACRE</span></li>
+                    <li><span>LACRE</span></li>
+                    <li><span>LACRE</span></li>
+                    <li><span>LACRE</span></li>
+                    <li><span>LACRE</span></li>
+                    <li><span>LACRE</span></li>
+                    <li><span>LACRE</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-info">
+        <p class="autores">Tipografia // <a href="https://x.com/ansuzyeux" target="_blank">@ansuzyeux</a> <br>
+            Web Design // <a href="https://x.com/sidssouza" target="_blank">@sidssouza</a> <br>
+        </p>
+
+        <p class="ano">
+            2024 @ Brasil
+        </p>
+
+        <a class="download" href="https://x.com/ansuzyeux" target="_blank">Download</a>
+    </div>
+
+</body>
+
+<script>
+    const elements = document.querySelectorAll('.letteringHoverScatter');
+
+    function changeBodyBackground() {
+        document.body.classList.add('hovered');
+    }
+
+    function restoreBodyBackground() {
+        document.body.classList.remove('hovered');
+    }
+
+    elements.forEach(elements => {
+        elements.addEventListener('mouseover', changeBodyBackground)
+        elements.addEventListener('mouseout', restoreBodyBackground)
+    })
+
+</script>
+
+</html>
