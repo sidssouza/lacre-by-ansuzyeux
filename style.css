@@ -13,6 +13,7 @@ body {
     overflow-y: hidden;
     background-color: var(--color-bg);
     transition: 0.5s ease;
+    font-family: 'Lacre', sans-serif;
 }
 
 body.hovered {
@@ -47,8 +48,10 @@ a:hover {
 }
 
 @font-face {
-    font-family: 'Lacre', sans-serif;
-    src: url(font/Lacre.otf);
+    font-family: 'Lacre';
+    src: url('font/Lacre.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 .hero {
@@ -264,22 +267,22 @@ Span {
     .type {
         z-index: 10;
         position: absolute;
-    
+
         transform: translate(-50%, -50%) rotate(3deg);
         top: 50%;
         left: 50%;
-    
+
         display: grid;
         grid-template-columns: repeat(3, 200px);
         grid-template-rows: repeat(3, 200px);
-    
+
         justify-content: center;
         align-content: center;
         justify-items: center;
         align-items: center;
-    
+
     }
-    
+
     Span {
         font-family: 'Lacre', sans-serif;
         font-size: 60px;
